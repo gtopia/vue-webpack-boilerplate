@@ -2,6 +2,8 @@
 
 > A Vue.js project.
 
+[![Build Status](https://travis-ci.org/gtopia/vue-webpack-boilerplate.svg?branch=master)](https://travis-ci.org/gtopia/vue-webpack-boilerplate)
+
 ## Features
 * Vue
 * Vue-router
