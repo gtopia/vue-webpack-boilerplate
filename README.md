@@ -1,6 +1,18 @@
-# vue-dev
+# vue-webpack-boilerplate
 
-> A Vue.js project
+> A Vue.js project.
+
+## Features
+* Vue
+* Vue-router
+* Vuex
+* Webpack
+* Image sprite
+* Sass
+* ES6
+* Eslint
+* HMR
+* Jest
 
 ## Build Setup
 
