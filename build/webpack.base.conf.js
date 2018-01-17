@@ -6,7 +6,7 @@ const vueLoaderConfig = require('./vue-loader.conf');
 const SpritesmithPlugin = require('webpack-spritesmith');
 
 function resolve(dir) {
-    return path.join(__dirname, '..', dir)
+    return path.join(__dirname, '..', dir);
 }
 
 const createLintingRule = () => ({
@@ -18,7 +18,7 @@ const createLintingRule = () => ({
         formatter: require('eslint-friendly-formatter'),
         emitWarning: !config.dev.showEslintErrorsInOverlay
     }
-})
+});
 
 module.exports = {
     context: path.resolve(__dirname, '../'),
@@ -114,4 +114,4 @@ module.exports = {
         tls: 'empty',
         child_process: 'empty'
     }
-}
+};
