@@ -38,6 +38,8 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
             'static': resolve('static'),
+            'util': resolve('src', 'common', 'js', 'util'),
+            'zepto': resolve('src', 'common', 'js', 'lib', 'zepto.1.2.0.min.js')
         }
     },
     module: {
