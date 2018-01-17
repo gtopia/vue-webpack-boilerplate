@@ -1,8 +1,6 @@
 # vue-webpack-boilerplate
 
-> A Vue.js project.
-
-[![Build Status](https://travis-ci.org/gtopia/vue-webpack-boilerplate.svg?branch=master)](https://travis-ci.org/gtopia/vue-webpack-boilerplate)
+[![Build Status][travis-image]][travis-url]
 
 ## Features
 * Vue
@@ -39,3 +37,6 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+[travis-image]: https://travis-ci.org/gtopia/vue-webpack-boilerplate.svg?branch=master&style=flat-square
+[travis-url]: https://travis-ci.org/gtopia/vue-webpack-boilerplate
