@@ -7,9 +7,11 @@
         <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
         <router-link to="/" class="item">Main</router-link>
         <router-link to="/user/foo" class="item">Foo</router-link>
-        <router-link :to="{ name: 'route_user', params: { id: 'bar' }}" class="item">Bar</router-link>
+        <router-link :to="{ name: 'router_user', params: { id: 'bar' }}" class="item">Bar</router-link>
     </p>
-    <router-view/>
+    <router-view />
+    <router-view name="router_view1" />
+    <router-view name="router_view2" />
   </div>
 </template>
 
