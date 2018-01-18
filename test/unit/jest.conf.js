@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   rootDir: path.resolve(__dirname, '../../'),
@@ -22,9 +22,8 @@ module.exports = {
     'src/**/*.{js,vue}',
     '!src/main.js',
     '!src/router/index.js',
-    '!src/store/**',
     '!src/constants/**',
     '!src/common/**',
     '!**/node_modules/**'
   ]
-}
+};
