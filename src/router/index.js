@@ -41,6 +41,7 @@ export default new Router({
         },
         {
             path: '/user/:id',
+            name: 'route_user',
             component: User,
             children: [
                 // 当 /user/:id 匹配成功，
