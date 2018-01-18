@@ -4,20 +4,20 @@ import HelloWorld from '@/components/helloWorld';
 
 Vue.use(Router);
 
+const User = {
+    template: '<div>User {{ $route.params.name }}</div>'
+};
+
 export default new Router({
     routes: [
         {
             path: '/',
             name: 'HelloWorld',
             component: HelloWorld
+        },
+        {
+            path: '/user/:name',
+            component: User
         }
-        // {
-        //     path: '/foo',
-        //     component: Foo
-        // },
-        // {
-        //     path: '/bar',
-        //     component: Bar
-        // }
     ]
 });
