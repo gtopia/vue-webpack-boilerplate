@@ -33,11 +33,11 @@ const User = {
 };
 
 const UserHome = {
-    template: '<div>User Home</div>'
+    template: '<transition name="slide"><div>User Home</div></transition>'
 };
 
 const UserProfile = {
-    template: '<div>User Profile</div>'
+    template: '<transition name="fade"><div>User Profile</div></transition>'
 };
 
 const UserPosts = {
@@ -95,7 +95,10 @@ const router = new Router({
             path: '*',
             component: NotFound
         }
-    ]
+    ],
+    scrollBehavior (to, from, savedPosition) {
+        // return 期望滚动到的位置
+    }
 });
 
 router.beforeEach((to, from, next) => {
