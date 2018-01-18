@@ -24,6 +24,7 @@ module.exports = {
     // "indent": ["error", 4],
     "indent": 'off',
     "semi": [2, "always"],
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "brace-style": [1, "stroustrup"]
   }
 }
