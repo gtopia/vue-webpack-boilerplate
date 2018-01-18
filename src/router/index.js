@@ -14,11 +14,22 @@ const User = {
         </div>
     `,
     beforeRouteUpdate(to, from, next) {
-        // react to route changes...
-        // don't forget to call next()
+        // react to route changes, called only when component been reused
         console.log('>> to: ', to);
         console.log('>> from: ', from);
+
+        // don't forget to call next()
         next();
+    },
+    beforeRouteLeave(to, from, next) {
+        const answer = window.confirm('Do you really want to leave? you have unsaved changes!');
+
+        if (answer) {
+            next();
+        }
+        else {
+            next(false);
+        }
     }
 };
 
