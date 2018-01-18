@@ -34,7 +34,12 @@ const UserPosts = {
     template: '<div>User Posts</div>'
 };
 
+const NotFound = {
+    template: '<h1>404</h1>'
+};
+
 export default new Router({
+    mode: 'history',
     routes: [{
             path: '/',
             name: 'HelloWorld',
@@ -74,6 +79,10 @@ export default new Router({
                 }
             ],
             redirect: '/user/:id/profile'
+        },
+        {
+            path: '*',
+            component: NotFound
         }
     ]
 });
