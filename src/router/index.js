@@ -6,9 +6,10 @@ Vue.use(Router);
 
 const User = {
     // template: '<div>User {{ $route.params.id }}</div>',
+    props: ['id'],
     template: `
         <div class="user">
-            <h2>User {{ $route.params.id }}</h2>
+            <h2>User {{ id }}</h2>
             <router-view></router-view>
         </div>
     `,
@@ -41,12 +42,16 @@ export default new Router({
         },
         {
             path: '/user/:id',
-            redirect: '/user/:id/profile',
             name: 'router_user',
             components: {
                 default: User,
                 router_view1: UserProfile,
                 router_view2: UserPosts
+            },
+            props: {
+                default: true,
+                router_view1: false,
+                router_view2: false
             },
             children: [
                 // 当 /user/:id 匹配成功，
@@ -67,7 +72,8 @@ export default new Router({
                     path: 'posts',
                     component: UserPosts
                 }
-            ]
+            ],
+            redirect: '/user/:id/profile'
         }
     ]
 });
