@@ -41,11 +41,12 @@ export default new Router({
         },
         {
             path: '/user/:id',
+            redirect: '/user/:id/profile',
             name: 'router_user',
             components: {
                 default: User,
                 router_view1: UserProfile,
-                router_view2: UserPosts,
+                router_view2: UserPosts
             },
             children: [
                 // 当 /user/:id 匹配成功，
