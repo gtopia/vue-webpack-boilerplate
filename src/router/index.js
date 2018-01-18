@@ -26,8 +26,7 @@ const User = {
 
         if (answer) {
             next();
-        }
-        else {
+        } else {
             next(false);
         }
     }
@@ -49,7 +48,7 @@ const NotFound = {
     template: '<h1>404</h1>'
 };
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     routes: [{
             path: '/',
@@ -59,6 +58,7 @@ export default new Router({
         {
             path: '/user/:id',
             name: 'router_user',
+            meta: { requiresAuth: true },
             components: {
                 default: User,
                 router_view1: UserProfile,
@@ -97,3 +97,27 @@ export default new Router({
         }
     ]
 });
+
+router.beforeEach((to, from, next) => {
+    console.log('>> beforeEach.');
+
+    // Check login
+    // if (to.matched.some(record => record.meta.requiresAuth)) {
+    //     // this route requires auth, check if logged in
+    //     // if not, redirect to login page.
+    //     if (!auth.loggedIn()) {
+    //         next({
+    //             path: '/login',
+    //             query: { redirect: to.fullPath }
+    //         })
+    //     } else {
+    //         next()
+    //     }
+    // } else {
+    //     next() // 确保一定要调用 next()
+    // }
+
+    next();
+});
+
+export default router;
