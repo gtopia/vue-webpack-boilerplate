@@ -25,6 +25,7 @@ module.exports = {
     "indent": 'off',
     "semi": [2, "always"],
     "space-before-function-paren": "off",
-    "brace-style": [1, "stroustrup"]
+    // "brace-style": [1, "stroustrup"]
+    "brace-style": [1, "1tbs"]
   }
 }
