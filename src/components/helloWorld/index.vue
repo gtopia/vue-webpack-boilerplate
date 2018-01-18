@@ -43,8 +43,15 @@ export default {
     // },
     data () {
         return {
-            // message: 'Welcome to Your Vue.js App'
+            counter: 1
         };
+    },
+    created () {
+        this.fetchData();
+    },
+    watch: {
+        // 如果路由有变化，会再次执行该方法
+        '$route': 'fetchData'
     },
     components: {
         loading
@@ -54,8 +61,11 @@ export default {
             'setMessage'
         ]),
         updateMessage () {
-            // debugger;
             this.$store.dispatch('main/setMessage', 'This is new message.');
+        },
+        fetchData () {
+            this.counter++;
+            console.log('>> fetchData: ', this.counter);
         }
     },
     computed: {
